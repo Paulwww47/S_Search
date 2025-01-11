@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>嗖搜</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>快捷搜索设置</h1>
+      <p>在这里管理你的搜索引擎和偏好设置</p>
+    </header>
+
+    <main>
+      <section class="search-engines">
+        <div class="section-header">
+          <h2>搜索引擎</h2>
+          <button id="addEngine" class="btn primary">添加搜索引擎</button>
+        </div>
+        
+        <div class="engine-list" id="engineList">
+          <!-- 搜索引擎列表将通过 JavaScript 动态生成 -->
+        </div>
+      </section>
+
+      <section class="preferences">
+        <h2>偏好设置</h2>
+        
+        <div class="preference-item">
+          <label>侧边栏位置</label>
+          <select id="position" class="select">
+            <option value="left">左侧</option>
+            <option value="right">右侧</option>
+          </select>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="status" id="status"></div>
+    </footer>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html> 

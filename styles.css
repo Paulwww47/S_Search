@@ -1,0 +1,126 @@
+/* 添加命名空间前缀，避免与网站样式冲突 */
+.quick-search-sidebar {
+  position: fixed;
+  z-index: 2147483640;
+  display: flex;
+  width: auto;
+}
+
+.quick-search-sidebar.right {
+  right: 0;
+}
+
+.quick-search-sidebar.left {
+  left: 0;
+}
+
+.quick-search-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: white;
+  user-select: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.quick-search-sidebar.right .quick-search-icon {
+  border-radius: 8px 0 0 8px;
+}
+
+.quick-search-sidebar.left .quick-search-icon {
+  border-radius: 0 8px 8px 0;
+}
+
+.quick-search-menu {
+  position: fixed;
+  transform: none;
+  width: 200px;
+  height: auto;
+  padding: 8px 0;
+  overflow: hidden;
+  background: white;
+  transition: left 0.2s ease, right 0.2s ease;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 2147483641;
+  visibility: visible;
+  opacity: 1;
+  cursor: move;
+}
+
+.quick-search-menu.right {
+  right: -200px;
+  transform-origin: right center;
+  transform: translateY(-50%);
+}
+
+.quick-search-menu.left {
+  left: -200px;
+  transform-origin: left center;
+  transform: translateY(-50%);
+}
+
+.quick-search-menu.right.show {
+  right: 0;
+}
+
+.quick-search-menu.left.show {
+  left: 0;
+}
+
+.quick-search-item {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  position: relative;
+  z-index: 2147483642;
+}
+
+.quick-search-item:hover {
+  background: #f5f5f5;
+}
+
+.quick-search-item span:first-child {
+  flex: 1;
+  font-weight: 500;
+}
+
+.quick-search-item span:last-child {
+  color: #666;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.quick-search-item img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.quick-search-item::after {
+  display: none;
+}
+
+.quick-search-item:hover::after {
+  display: none;
+}
+
+.quick-search-item span {
+  position: relative;
+  z-index: 1;
+}
+
+.quick-search-sidebar.dragging {
+  opacity: 1;
+}
+
+.quick-search-menu.dragging {
+  opacity: 0.7;
+  transition: none;
+} 
